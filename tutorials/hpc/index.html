@@ -1351,7 +1351,7 @@ than one line with <em><span class="environment_env" id="env12">main</span></em>
 <div class="showable-inner">
 <div class="showable-header hint" id="showabletitle48"><a href="" id="showablelink48">Hint</a></div>
 <div class="showable-body hint" id="showablebody48">
-<p>Lookup the man page for <em>sbatch</em> command.  <em>sbatch</em>'s options match up with the <em>#SBATCH</em> comments at the top of each job 
+<p>Look up the man page for <em>sbatch</em> command.  <em>sbatch</em>'s options match up with the <em>#SBATCH</em> comments at the top of each job 
 script.  Some will be affected by more than one option</p>
 <div class="showable-container showable-hidden" id="showable49">
 <div class="showable-inner">
@@ -1561,7 +1561,7 @@ not actually allocate any of it to you so your job will get terminated once it t
 <div class="showable-body answer" id="showablebody60">
 <p>This is a maximum time.  Your job may finish early, at which point it hands back the resources for the next job.  However if it 
 tries to run longer the HPC will terminate the job.
-<div class="info"><b>HINT</b>: when selecting a time for your job its best to estimate your job runtime to be close to 
+<div class="info"><b>HINT</b>: when selecting a time for your job it's best to estimate your job runtime to be close to 
 what it actually uses as it can help the HPC scheduler 'fit' your job in between other jobs though be careful to allow enough 
 time.  If you think your job may not complete in time you can ask the system administrator of your HPC to add more time.</div></p>
 </div>
@@ -1697,7 +1697,7 @@ time.  If you think your job may not complete in time you can ask the system adm
 <div class="environment_if" id="ifenv15">
 <h3 id="reservations">Reservations</h3>
 <p>Before we continue, a quick note on reservations.  Reservations are not normally needed however sometimes they will, particularly 
-when the HPC is busy.  To make use of a reservation you need to know its name and provide it with the <em>--reservation</em> option</p>
+when the HPC is busy.  To make use of a reservation you need to know its name and provide it with the <em>--reservation</em> option within your job script.</p>
 <div class="environment_if" id="ifenv16">
 <p>Today we use the <em><span class="environment_env" id="env9">AROBINSON_TRAINING</span></em> reservation so that we have resources available to run our jobs.  Your
 job scripts will need to contain the line:</p>
@@ -2437,7 +2437,7 @@ If <em>top</em> is running you can press the <em>c</em> key to toggle show/hide 
 <div class="showable-body answer" id="showablebody110">
 <p><strong>How can you get <em>top</em> to only show your processes?</strong><br />
 <strong>Answer 1</strong>: <em>top -u YOURUSERNAME</em><br />
-<strong>Answer 2</strong>: while running <em>top</em> press the <em>u</em> key, type YOURUSERNAME and press <ENTER> key </p>
+<strong>Answer 2</strong>: while running <em>top</em> press the <em>u</em> key, type YOURUSERNAME and press &lt;ENTER&gt; key </p>
 <p><strong>Why might this be useful?</strong><br />
 When you are looking to see how much CPU or Memory you are using on a node that has other user jobs running it can be hard
 to quickly identify yours.</p>
@@ -2472,7 +2472,7 @@ the earlier topics if you have forgotten how to do these tasks.</p>
 <li><strong>Tasks</strong>: 1 </li>
 <li><strong>CPUs</strong>: 1</li>
 <li><strong>Partition</strong>: <span class="environment_env" id="env3">main</span> </li>
-<li><strong>Time</strong>: 5 mins </li>
+<li><strong>Time</strong>: 6 mins </li>
 <li><strong>Memory</strong>: 1 GB (remember to specify it in MB)</li>
 <li><strong>Reservation</strong>: <span class="environment_env" id="env4">AROBINSON_TRAINING</span>
 </li>
@@ -2513,7 +2513,7 @@ nodes, <em>top</em> won't be able to see the job.  To be able to use top, you wi
 </code></pre>
 
 <p>Where XXX is the actual node number you were allocated (See task 3.4).</p>
-<p>You are now connected from your computer to lims-hpc-m which is connected to lims-hpc-X.</p>
+<p>You are now connected from your computer to barcoo which is connected to barcooXXX.</p>
 <pre><code class="text">+---------------+            +------------+            +------------+
 | YOUR COMPUTER | -- SSH --&gt; |  BARCOO    | -- SSH --&gt; | BARCOOXXX  |
 +---------------+            +------------+            +------------+
