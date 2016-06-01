@@ -680,14 +680,14 @@ where you start when you first login is your <em>HOME</em> directory.</p>
 created automatically for your user account. They are mostly configuration options for various programs including 
 the shell. It is safe to ignore them for the moment.</p>
 <pre><code class="sh">$ ls --all
-.              .bash_logout    exp01    .lesshst
+.              .bash_logout    exp01    .lesshst    .viminfo
 ..             .bash_profile   file01   muscle.fq
-.bash_history  .bashrc         .kshrc   .viminfo
+.bash_history  .bashrc         .kshrc   .ssh
 </code></pre>
 
 <p>There are two trick files here; namely <em>.</em> and <em>..</em> which are not real files but instead, shortcuts.  <em>.</em> is a shortcut
 for the current directory and <em>..</em> a shortcut for the directory above the current one.</p>
-<p><strong>Answer 2</strong>: 10 files (don't count <em>.</em> and <em>..</em>)</p>
+<p><strong>Answer 2</strong>: 11 files (don't count <em>.</em> and <em>..</em>)</p>
 </div>
 </div>
 </div>
@@ -1820,18 +1820,18 @@ the <em>*</em> wildcard to specify that you want to copy all the files.
 <p>There are a number of ways you could do this depending on how you specify the source and destination 
 paths to <em>cp</em>. You only need to perform one of these ways, but we show multiple ones for your reference.</p>
 <p><strong>Answer 1</strong>: From your home directory:</p>
-<pre><code class="sh">$ cp /home/group/common/training/Intro_to_Unix/* test
+<pre><code class="sh">$ cp /vlsci/TRAINING/shared/Intro_to_Unix/* test
 </code></pre>
 
 <p><strong>Answer 2</strong>: Change to the test directory and then copy (assuming you started in your home directory):</p>
 <pre><code class="sh">$ cd test
-$ cp /home/group/common/training/Intro_to_Unix/* .
+$ cp /vlsci/TRAINING/shared/Intro_to_Unix/* .
 </code></pre>
 
 <p>In the example above the '<em>.</em>' (dot) character refers to the current working directory. It should be 
 the test subdirectory of your home directory.</p>
-<p><strong>Answer 3</strong>: Change to the /home/group/common/training/Intro_to_Unix/ directory and then copy:</p>
-<pre><code class="sh">cd /home/group/common/training/Intro_to_Unix/
+<p><strong>Answer 3</strong>: Change to the <span class="environment_env" id="env1">/vlsci/TRAINING/shared/Intro_to_Unix</span> directory and then copy:</p>
+<pre><code class="sh">cd /vlsci/TRAINING/shared/Intro_to_Unix/
 cp * ~/test
 </code></pre>
 
@@ -1899,7 +1899,7 @@ it from and the directory that you copied it to.</span></div>
 <p>Use <em>ls -l</em> to check the size of files.</p>
 <p>You could do this in many ways depending on the value of your working directory. We just show one possible 
 way for each file:</p>
-<pre><code class="sh">$ ls -l /home/group/common/training/Intro_to_Unix/expectations.txt
+<pre><code class="sh">$ ls -l /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 
 $ ls -l ~/test/expectations.txt
 </code></pre>
@@ -1909,8 +1909,8 @@ are the same. </p>
 <p><strong>Answer</strong>: They should each be <em>1033773</em> bytes</p>
 <p><strong>Alternate</strong>: Sometimes it is useful to get file sizes reported in more "human friendly" units than bytes. If this is 
 true then try the <em>-h</em> option for ls:</p>
-<pre><code class="sh">$ ls -lh /home/group/common/training/Intro_to_Unix/expectations.txt
--rw-r--r-- 1 arobinson common 1010K Mar 26  2012 /home/group/common/training/Intro_to_Unix/expectations.txt
+<pre><code class="sh">$ ls -lh /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
+-rw-r--r-- 1 arobinson common 1010K Mar 26  2012 /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 </code></pre>
 
 <p>In this case the size is reported in kilobytes as <em>1010K</em>. Larger files are reported in megabytes, gigabytes 
@@ -1976,7 +1976,7 @@ it from and the directory that you copied it to.</span></div>
 <div class="showable-header answer" id="showabletitle82"><a href="" id="showablelink82">Answer</a></div>
 <div class="showable-body answer" id="showablebody82">
 <p>Use the <em>diff</em> command to compare the contents of two files.</p>
-<pre><code class="sh">$ diff /home/group/common/training/Intro_to_Unix/expectations.txt expectations.txt
+<pre><code class="sh">$ diff /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt expectations.txt
 </code></pre>
 
 <p>If the two files are identical the <em>diff</em> command will NOT produce any output)</p>
@@ -2134,7 +2134,7 @@ editors exist such as <em>vim</em> and <em>emacs</em>, however they take a subst
 <div class="showable-container quest showable-hidden" id="showable91">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle91"><span class="link-like" id="showablelink91">4.7) Did the changes you made to <em>~/test/expectations.txt</em> have any effect on 
-<em>/home/group/common/training/Intro_to_Unix/expectations.txt</em>? How can you tell if two files are the 
+<em><span class="environment_env" id="env0">/vlsci/TRAINING/shared/Intro_to_Unix</span>/expectations.txt</em>? How can you tell if two files are the 
 same or different in their contents?</span></div>
 </div>
 </div>
@@ -2182,7 +2182,7 @@ same or different in their contents?</span></div>
 <p>Use <em>diff</em> to check that the two files are different after you have made the change to the copy of 
 <em>expectations.txt</em> in your <em>~/test</em> directory.</p>
 <pre><code class="sh">diff ~/test/expectations.txt \
-/home/group/common/training/Intro_to_Unix/expectations.txt
+/vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 </code></pre>
 
 <p>You could also use <em>ls</em> to check that the files have different sizes.</p>
@@ -2436,7 +2436,7 @@ in the wrong location! Now is a good moment to pause and think about file backup
 <div class="showable-container quest showable-hidden" id="showable109">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle109"><span class="link-like" id="showablelink109">4.12) Recreate the test directory in your home directory and copy all the files from 
-<em>/home/group/common/training/Intro_to_Unix/</em> back into the test directory.</span></div>
+<em>/vlsci/TRAINING/shared/Intro_to_Unix/</em> back into the test directory.</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable110">
@@ -2462,7 +2462,7 @@ in the wrong location! Now is a good moment to pause and think about file backup
 <p>Repeat exercises 4.1 and 4.2.</p>
 <pre><code class="sh">$ cd ~
 $ mkdir test
-$ cp /home/group/common/training/Intro_to_Unix/* test
+$ cp /vlsci/TRAINING/shared/Intro_to_Unix/* test
 </code></pre>
 
 </div>
