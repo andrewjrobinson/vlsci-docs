@@ -419,10 +419,10 @@ That is, you need to tell it how many CPUs, RAM, Nodes (servers), and Time you n
 one that coordinates all the HPCs tasks.</p>
 <p><strong>Server details</strong>:</p>
 <ul>
-<li><strong>host</strong>: <span class="environment_env" id="env38">barcoo.vlsci.unimelb.edu.au</span></li>
-<li><strong>port</strong>: <span class="environment_env" id="env39">22</span> </li>
-<li><strong>username</strong>: <span class="environment_env" id="env40">trainXX</span></li>
-<li><strong>password</strong>: <span class="environment_env" id="env41">(provided at workshop)</span></li>
+<li><strong>host</strong>: <span class="environment_env" id="env39">barcoo.vlsci.unimelb.edu.au</span></li>
+<li><strong>port</strong>: <span class="environment_env" id="env40">22</span> </li>
+<li><strong>username</strong>: <span class="environment_env" id="env41">arobinson</span></li>
+<li><strong>password</strong>: <span class="environment_env" id="env42">(provided at workshop)</span></li>
 </ul>
 <p><strong>Connection instructions</strong>:</p>
 <div class="showable-container information showable-hidden" id="showable1">
@@ -432,9 +432,9 @@ one that coordinates all the HPCs tasks.</p>
 <p>Both Mac OS X and Linux come with a version of ssh (called OpenSSH) that can be used from the command line.  To use OpenSSH you must 
 first start a terminal program on your computer.  On OS X the standard terminal is called Terminal, and it is installed by default. 
 On Linux there are many popular terminal programs including: xterm, gnome-terminal, konsole (if you aren't sure, then xterm is a good 
-default).  When you've started the terminal you should see a command prompt.  To log into <span class="environment_env" id="env34">BARCOO</span>, for example, type this command at 
-the prompt and press return (where the word username is replaced with your <span class="environment_env" id="env35">BARCOO</span> username):</p>
-<p><em>$ ssh  <span class="environment_env" id="env36">trainXX</span>@<span class="environment_env" id="env37">barcoo.vlsci.unimelb.edu.au</span></em></p>
+default).  When you've started the terminal you should see a command prompt.  To log into <span class="environment_env" id="env35">BARCOO</span>, for example, type this command at 
+the prompt and press return (where the word username is replaced with your <span class="environment_env" id="env36">BARCOO</span> username):</p>
+<p><em>$ ssh  <span class="environment_env" id="env37">trainXX</span>@<span class="environment_env" id="env38">barcoo.vlsci.unimelb.edu.au</span></em></p>
 <p>The same procedure works for any other machine where you have an account except that if your Unix computer uses a port other than 22 you will
 need to specify the port by adding the option <em>-p PORT</em> with PORT substituted with the port number.</p>
 <p>You may be presented with a message along the lines of:</p>
@@ -469,15 +469,15 @@ from this web page:</p>
 <p><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html</a></p>
 <p>When you start PuTTY you should see a window which looks something like this:</p>
 <p><img src="../../includes/media/putty1.png" title="Putty Connection Dialog" alt="Putty Connection Dialog" width="400px" /></p>
-<p>To connect to <span class="environment_env" id="env30">BARCOO</span> you should enter <em><span class="environment_env" id="env31">barcoo.vlsci.unimelb.edu.au</span></em> into the box entitled "Host Name (or IP address)" 
-and <em><span class="environment_env" id="env32">22</span></em> in the port, 
+<p>To connect to <span class="environment_env" id="env31">BARCOO</span> you should enter <em><span class="environment_env" id="env32">barcoo.vlsci.unimelb.edu.au</span></em> into the box entitled "Host Name (or IP address)" 
+and <em><span class="environment_env" id="env33">22</span></em> in the port, 
 then click on the Open button. All of the settings should remain the same as they were when PuTTY started (which should be the 
 same as they are in the picture above).</p>
 <p>In some circumstances you will be presented with a window entitled PuTTY Security Alert. It will say something along the lines 
 of <em>"The server's host key is not cached in the registry"</em>. This is nothing to worry about, and you should agree to continue (by 
 clicking on Yes). You usually see this message the first time you try to connect to a particular remote computer.</p>
 <p>If all goes well, a terminal window will open, showing a prompt with the text <em>"login as:"</em>. An example terminal window is shown 
-below. You should type your <span class="environment_env" id="env33">BARCOO</span> username and press enter. After entering your username you will be prompted for your 
+below. You should type your <span class="environment_env" id="env34">BARCOO</span> username and press enter. After entering your username you will be prompted for your 
 password. Assuming you type the correct username and password the system should then display a welcome message, and then 
 present you with a Unix prompt. If you get this far then you are ready to start entering Unix commands and thus begin using 
 the remote computer.</p>
@@ -508,7 +508,7 @@ the remote computer.</p>
 <div class="showable-header hint" id="showabletitle4"><a href="" id="showablelink4">Hint</a></div>
 <div class="showable-body hint" id="showablebody4">
 <p>When you login, you will be presented with a message; this is called the <em>Message Of The Day</em> and usually includes lots of useful 
-information.  On <span class="environment_env" id="env29">BARCOO</span> this includes a list of useful commands, the last login details for your account and 
+information.  On <span class="environment_env" id="env30">BARCOO</span> this includes a list of useful commands, the last login details for your account and 
 the contact email of the system administrator</p>
 </div>
 </div>
@@ -551,8 +551,8 @@ the contact email of the system administrator</p>
 <div class="showable-inner">
 <div class="showable-header hint" id="showabletitle7"><a href="" id="showablelink7">Hint</a></div>
 <div class="showable-body hint" id="showablebody7">
-<p>The <em><span class="environment_env" id="env22">barcoo</span>[2-4]</em> is shorthand for <em><span class="environment_env" id="env23">barcoo</span>2 <span class="environment_env" id="env24">barcoo</span>3 and <span class="environment_env" id="env25">barcoo</span>4</em> and <em><span class="environment_env" id="env26">barcoo</span>[1,5]</em> is shorthand for
-<em><span class="environment_env" id="env27">barcoo</span>1</em> and <em><span class="environment_env" id="env28">barcoo</span>5</em></p>
+<p>The <em><span class="environment_env" id="env23">barcoo</span>[2-4]</em> is shorthand for <em><span class="environment_env" id="env24">barcoo</span>2 <span class="environment_env" id="env25">barcoo</span>3 and <span class="environment_env" id="env26">barcoo</span>4</em> and <em><span class="environment_env" id="env27">barcoo</span>[1,5]</em> is shorthand for
+<em><span class="environment_env" id="env28">barcoo</span>1</em> and <em><span class="environment_env" id="env29">barcoo</span>5</em></p>
 <div class="showable-container showable-hidden" id="showable8">
 <div class="showable-inner">
 <div class="showable-header" id="showabletitle8"><a href="" id="showablelink8">more</a></div>
@@ -1267,7 +1267,7 @@ is called the output file.</li>
 for a period of time exclusively for you. </li>
 </ul>
 <h3 id="exercises_2">Exercises</h3>
-<p><strong>Useful Commands</strong>: <em>man, sinfo, cat, sbatch, squeue, cp, module, prime, fakejob</em></p>
+<p><strong>Useful Commands</strong>: <em>man, sinfo, cat, sbatch, squeue, cp, module, prime</em></p>
 <div class="showable-container quest showable-hidden" id="showable43">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle43"><span class="link-like" id="showablelink43">3.1) Which nodes could a ‘<span class="environment_env" id="env0">main</span>’ job go on?</span></div>
@@ -1282,13 +1282,15 @@ for a period of time exclusively for you. </li>
 <div class="showable-inner">
 <div class="showable-header" id="showabletitle45"><a href="" id="showablelink45">more</a></div>
 <div class="showable-body" id="showablebody45">
-<p>Have a look at the PARTITION and NODELIST columns.  The <em><span class="environment_env" id="env18">barcoo</span>[2-4]</em> is shorthand for <em><span class="environment_env" id="env19">barcoo</span>2 <span class="environment_env" id="env20">barcoo</span>3 
-and <span class="environment_env" id="env21">barcoo</span>4</em></p>
+<p>Have a look at the PARTITION and NODELIST columns.  The <em><span class="environment_env" id="env19">barcoo</span>[2-4]</em> is shorthand for <em><span class="environment_env" id="env20">barcoo</span>2 <span class="environment_env" id="env21">barcoo</span>3 
+and <span class="environment_env" id="env22">barcoo</span>4</em></p>
 <pre><code class="sh">$ sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-main*        up 30-00:00:0     12    mix barcoo[003,014,026-027,049,051-056,058]
-main*        up 30-00:00:0     44  alloc barcoo[001-002,004-013,015-025,028-048]
-main*        up 30-00:00:0     14   idle barcoo[050,057,059-070]
+compute*     up 200-00:00:      3    mix lims-hpc-[2-4]
+compute*     up 200-00:00:      2   idle lims-hpc-[1,5]
+bigmem       up 200-00:00:      1   idle lims-hpc-1
+8hour        up   08:00:00      3    mix lims-hpc-[2-4]
+8hour        up   08:00:00      3   idle lims-hpc-[1,5],lims-hpc-m
 </code></pre>
 
 <p>Note: the output to the sinfo command will look different depending on which HPC you are using and it's current usage levels</p>
@@ -1323,9 +1325,9 @@ main*        up 30-00:00:0     14   idle barcoo[050,057,059-070]
 <div class="showable-inner">
 <div class="showable-header answer" id="showabletitle46"><a href="" id="showablelink46">Answer</a></div>
 <div class="showable-body answer" id="showablebody46">
-<p>The <em>sinfo</em> command will list the <em>partitions</em>.  It summarises the nodes by their current status so there may be more 
-than one line with <em><span class="environment_env" id="env12">main</span></em> in the partition column.  It lists the nodes in shorthand i.e. <span class="environment_env" id="env13">barcoo</span>[1,3-5] means 
-<span class="environment_env" id="env14">barcoo</span>1, <span class="environment_env" id="env15">barcoo</span>3, <span class="environment_env" id="env16">barcoo</span>4, <span class="environment_env" id="env17">barcoo</span>5.</p>
+<p>The <em>sinfo</em> command will list the <em>partitions</em>.  It summaries the nodes by their current status so there may be more 
+than one line with <em><span class="environment_env" id="env13">main</span></em> in the partition column.  It lists the nodes in shorthand i.e. <span class="environment_env" id="env14">barcoo</span>[1,3-5] means 
+<span class="environment_env" id="env15">barcoo</span>1, <span class="environment_env" id="env16">barcoo</span>3, <span class="environment_env" id="env17">barcoo</span>4, <span class="environment_env" id="env18">barcoo</span>5.</p>
 <div class="environment_if" id="ifenv11">
 <p><strong>Answer</strong>: barcoo001, barcoo002, ..., barcoo070</p>
 </div>
@@ -1341,17 +1343,21 @@ than one line with <em><span class="environment_env" id="env12">main</span></em>
     });
     </script>
 <hr />
+<div class="environment_if" id="ifenv13">
+<p>Question 3.2 not possible on <span class="environment_env" id="env12">BARCOO</span>, skipping it today</p>
+</div>
+<hr />
 <p>Use the <em>cat</em> command to view the contents of <em>task01</em>, <em>task02</em> and <em>task03</em> job script</p>
 <div class="showable-container quest showable-hidden" id="showable47">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle47"><span class="link-like" id="showablelink47">3.2) How many <em>cpu cores</em> will each ask for?</span></div>
+<div class="showable-header quest" id="showabletitle47"><span class="link-like" id="showablelink47">3.3) How many <em>cpu cores</em> will each ask for?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable48">
 <div class="showable-inner">
 <div class="showable-header hint" id="showabletitle48"><a href="" id="showablelink48">Hint</a></div>
 <div class="showable-body hint" id="showablebody48">
-<p>Look up the man page for <em>sbatch</em> command.  <em>sbatch</em>'s options match up with the <em>#SBATCH</em> comments at the top of each job 
+<p>Lookup the man page for <em>sbatch</em> command.  <em>sbatch</em>'s options match up with the <em>#SBATCH</em> comments at the top of each job 
 script.  Some will be affected by more than one option</p>
 <div class="showable-container showable-hidden" id="showable49">
 <div class="showable-inner">
@@ -1414,7 +1420,7 @@ However, since we know that all nodes on <span class="environment_env" id="env11
 <hr />
 <div class="showable-container quest showable-hidden" id="showable51">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle51"><span class="link-like" id="showablelink51">3.3) What about total memory?</span></div>
+<div class="showable-header quest" id="showabletitle51"><span class="link-like" id="showablelink51">3.4) What about total memory?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable52">
@@ -1469,7 +1475,7 @@ however this will <b>NOT</b> work since the meaning of <em>--mem</em> is <em>"go
 not actually allocate any of it to you so your job will get terminated once it tries to use any memory.</div>
 
 <p><strong>Answer</strong>:</p>
-<div class="environment_if" id="ifenv14">
+<div class="environment_if" id="ifenv15">
 <ul>
 <li>task01: <strong>1024MB</strong> (1GB) i.e. 1024 x 1 x 1</li>
 <li>task02: <strong>12288MB</strong> (12GB) i.e. 2048 x 3 x 2</li>
@@ -1490,7 +1496,7 @@ not actually allocate any of it to you so your job will get terminated once it t
 <hr />
 <div class="showable-container quest showable-hidden" id="showable55">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle55"><span class="link-like" id="showablelink55">3.4) How long can each run for?</span></div>
+<div class="showable-header quest" id="showabletitle55"><span class="link-like" id="showablelink55">3.5) How long can each run for?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable56">
@@ -1535,7 +1541,7 @@ not actually allocate any of it to you so your job will get terminated once it t
 <hr />
 <div class="showable-container quest showable-hidden" id="showable58">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle58"><span class="link-like" id="showablelink58">3.5) Is this maximum, minimum or both runtime?</span></div>
+<div class="showable-header quest" id="showabletitle58"><span class="link-like" id="showablelink58">3.6) Is this maximum, minimum or both runtime?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable59">
@@ -1561,7 +1567,7 @@ not actually allocate any of it to you so your job will get terminated once it t
 <div class="showable-body answer" id="showablebody60">
 <p>This is a maximum time.  Your job may finish early, at which point it hands back the resources for the next job.  However if it 
 tries to run longer the HPC will terminate the job.
-<div class="info"><b>HINT</b>: when selecting a time for your job it's best to estimate your job runtime to be close to 
+<div class="info"><b>HINT</b>: when selecting a time for your job its best to estimate your job runtime to be close to 
 what it actually uses as it can help the HPC scheduler 'fit' your job in between other jobs though be careful to allow enough 
 time.  If you think your job may not complete in time you can ask the system administrator of your HPC to add more time.</div></p>
 </div>
@@ -1578,7 +1584,7 @@ time.  If you think your job may not complete in time you can ask the system adm
 <hr />
 <div class="showable-container quest" id="showable61">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle61"><a href="" id="showablelink61">3.6) Calculate the <em>--time</em> specification for the following runtimes:</a></div>
+<div class="showable-header quest" id="showabletitle61"><a href="" id="showablelink61">3.7) Calculate the <em>--time</em> specification for the following runtimes:</a></div>
 <div class="showable-body quest" id="showablebody61">
 <ol>
 <li><span class="fix150">1h30m:</span><span class="fix60">--time=</span><span class="answer100"></span></li>
@@ -1638,7 +1644,7 @@ time.  If you think your job may not complete in time you can ask the system adm
 <hr />
 <div class="showable-container quest" id="showable64">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle64"><a href="" id="showablelink64">3.7) What do the following --time specifications mean?</a></div>
+<div class="showable-header quest" id="showabletitle64"><a href="" id="showablelink64">3.8) What do the following --time specifications mean?</a></div>
 <div class="showable-body quest" id="showablebody64">
 <ol>
 <li><span class="fix150">--time=12-00:20</span><span class="fix60"></span><span class="answer100"></span></li>
@@ -1694,14 +1700,14 @@ time.  If you think your job may not complete in time you can ask the system adm
     });
     </script>
 <hr />
-<div class="environment_if" id="ifenv15">
-<h3 id="reservations">Reservations</h3>
-<p>Before we continue, a quick note on reservations.  Reservations are not normally needed however sometimes they will, particularly 
-when the HPC is busy.  To make use of a reservation you need to know its name and provide it with the <em>--reservation</em> option within your job script.</p>
 <div class="environment_if" id="ifenv16">
-<p>Today we use the <em><span class="environment_env" id="env9">AROBINSON_TRAINING</span></em> reservation so that we have resources available to run our jobs.  Your
-job scripts will need to contain the line:</p>
-<p><em>#SBATCH --reservation=<span class="environment_env" id="env10">AROBINSON_TRAINING</span></em></p>
+<h3 id="reservations">Reservations</h3>
+<p>Before we continue, a quick note on reservations.  Reservations are not normally needed however sometimes we will, particularly 
+when the HPC is busy.  To make use of a reservation you need to know its name and provide it with the <em>--reservation</em> option</p>
+<div class="environment_if" id="ifenv17">
+<p>Today we use the <em><span class="environment_env" id="env9">TRAINING</span></em> reservation so that we have resources available to run our jobs.  Your
+jobs will need to contain the line:</p>
+<p><em>#SBATCH --reservation=<span class="environment_env" id="env10">TRAINING</span></em></p>
 </div>
 <hr />
 </div>
@@ -1709,7 +1715,7 @@ job scripts will need to contain the line:</p>
 <hr />
 <div class="showable-container quest showable-hidden" id="showable67">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle67"><span class="link-like" id="showablelink67">3.8) What job id was your job given?</span></div>
+<div class="showable-header quest" id="showabletitle67"><span class="link-like" id="showablelink67">3.9) What job id was your job given?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable68">
@@ -1751,7 +1757,7 @@ Submitted batch job 9998
 <hr />
 <div class="showable-container quest showable-hidden" id="showable70">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle70"><span class="link-like" id="showablelink70">3.9) Which node did your job go on?</span></div>
+<div class="showable-header quest" id="showabletitle70"><span class="link-like" id="showablelink70">3.10) Which node did your job go on?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable71">
@@ -1800,7 +1806,7 @@ $ squeue -u training01
 <h3 id="advanced">Advanced</h3>
 <div class="showable-container quest showable-hidden" id="showable73">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle73"><span class="link-like" id="showablelink73">3.10) Make a copy of <em>task01</em> and call it <em>prime_numbers</em>.  Make it load the training module and use the <em>prime</em> command to calculate prime 
+<div class="showable-header quest" id="showabletitle73"><span class="link-like" id="showablelink73">3.11) Make a copy of <em>task01</em> and call it <em>prime_numbers</em>.  Make it load the training module and use the <em>prime</em> command to calculate prime 
 numbers for 20 seconds.</span></div>
 </div>
 </div>
@@ -1829,7 +1835,7 @@ numbers for 20 seconds.</span></div>
 <li>adding the <em>module load training-gcc/1.0</em></li>
 <li>replacing the <em>sleep</em> (and <em>echo</em>) statements with a call to <em>prime 20</em>.</li>
 </ol>
-<div class="environment_if" id="ifenv18">
+<div class="environment_if" id="ifenv19">
 <pre><code class="bash">#!/bin/bash
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1024
@@ -1844,7 +1850,7 @@ prime 20
 echo &quot;Finished at: $(date)&quot;
 </code></pre>
 
-<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env7">AROBINSON_TRAINING</span></em> and 
+<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env7">TRAINING</span></em> and 
 <em>PARTITION</em> is replaced with <em><span class="environment_env" id="env8">main</span></em></p>
 </div>
 <div class="info"><b>Repeatable Science</b>: It's good scientific practice to include the version number of the module when loading it as this will 
@@ -1867,7 +1873,7 @@ of when this job was run.  If you have one before and after your main program yo
 <hr />
 <div class="showable-container quest showable-hidden" id="showable76">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle76"><span class="link-like" id="showablelink76">3.11) Submit the job.  What was the <em>largest</em> prime number it found in 20 seconds?</span></div>
+<div class="showable-header quest" id="showabletitle76"><span class="link-like" id="showablelink76">3.12) Submit the job.  What was the <em>largest</em> prime number it found in 20 seconds?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable77">
@@ -1919,7 +1925,7 @@ Finished at: Fri May  8 16:11:27 AEST 2015
 <hr />
 <div class="showable-container quest" id="showable79">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle79"><a href="" id="showablelink79">3.12) Modify your prime_numbers script to notify you via email when it starts and ends.  Submit it again</a></div>
+<div class="showable-header quest" id="showabletitle79"><a href="" id="showablelink79">3.13) Modify your prime_numbers script to notify you via email when it starts and ends.  Submit it again</a></div>
 <div class="showable-body quest" id="showablebody79">
 <ul>
 <li><strong>Did it start immediately or have some delay?</strong></li>
@@ -1977,7 +1983,7 @@ Finished at: Fri May  8 16:11:27 AEST 2015
 <div class="showable-inner">
 <div class="showable-header answer" id="showabletitle82"><a href="" id="showablelink82">Answer</a></div>
 <div class="showable-body answer" id="showablebody82">
-<div class="environment_if" id="ifenv20">
+<div class="environment_if" id="ifenv21">
 <pre><code class="bash">#!/bin/bash
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1024
@@ -1994,7 +2000,7 @@ prime 20
 echo &quot;Finished at: $(date)&quot;
 </code></pre>
 
-<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env5">AROBINSON_TRAINING</span></em> and 
+<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env5">TRAINING</span></em> and 
 <em>PARTITION</em> is replaced with <em><span class="environment_env" id="env6">main</span></em></p>
 </div>
 <p><strong>Answers</strong>:</p>
@@ -2437,7 +2443,7 @@ If <em>top</em> is running you can press the <em>c</em> key to toggle show/hide 
 <div class="showable-body answer" id="showablebody110">
 <p><strong>How can you get <em>top</em> to only show your processes?</strong><br />
 <strong>Answer 1</strong>: <em>top -u YOURUSERNAME</em><br />
-<strong>Answer 2</strong>: while running <em>top</em> press the <em>u</em> key, type YOURUSERNAME and press &lt;ENTER&gt; key </p>
+<strong>Answer 2</strong>: while running <em>top</em> press the <em>u</em> key, type YOURUSERNAME and press <ENTER> key </p>
 <p><strong>Why might this be useful?</strong><br />
 When you are looking to see how much CPU or Memory you are using on a node that has other user jobs running it can be hard
 to quickly identify yours.</p>
@@ -2472,9 +2478,9 @@ the earlier topics if you have forgotten how to do these tasks.</p>
 <li><strong>Tasks</strong>: 1 </li>
 <li><strong>CPUs</strong>: 1</li>
 <li><strong>Partition</strong>: <span class="environment_env" id="env3">main</span> </li>
-<li><strong>Time</strong>: 6 mins </li>
+<li><strong>Time</strong>: 5 mins </li>
 <li><strong>Memory</strong>: 1 GB (remember to specify it in MB)</li>
-<li><strong>Reservation</strong>: <span class="environment_env" id="env4">AROBINSON_TRAINING</span>
+<li><strong>Reservation</strong>: <span class="environment_env" id="env4">TRAINING</span>
 </li>
 </ul>
 <h3 id="task-2-loaduse-software-module">Task 2: Load/use software module</h3>
@@ -2494,7 +2500,7 @@ the earlier topics if you have forgotten how to do these tasks.</p>
 
 <h3 id="task-3-submit-job">Task 3: Submit job</h3>
 <div class="warning">
-<b>NOTE</b>: Task 4 is time dependent on task 3; you need to do it within 2 or 3 minutes of running task 3.1 so it might be a good idea to
+<b>NOTE</b>: Task 4 is time dependent on task 3; you need to do it within 2 or 3 minutes of running step 3.1 so it might be a good idea to
 read ahead before hand.  Don't stress if you don't complete it in time, you can simply run 3.1 again.
 </div>
 
@@ -2508,7 +2514,7 @@ read ahead before hand.  Don't stress if you don't complete it in time, you can 
 <p>Use the <em>top</em> command to check how much CPU and Memory the job is using.  Given that SLURM is running the job on your behalf on one of the compute 
 nodes, <em>top</em> won't be able to see the job.  To be able to use top, you will first need to login to the compute node that is running your job.</p>
 <p>To login:</p>
-<div class="environment_if" id="ifenv25">
+<div class="environment_if" id="ifenv26">
 <pre><code class="sh">$ ssh barcooXXX
 </code></pre>
 
