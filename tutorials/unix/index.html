@@ -1518,10 +1518,12 @@ Bourne-Again shell script text executable
 </code></pre>
 
 <p>Otherwise specify the full path of sleepy:</p>
-<pre><code class="sh">$ file /home/group/common/training/Intro_to_Unix/sleepy
+<div class="environment_if" id="ifenv6">
+<pre><code class="sh">$ file /vlsci/TRAINING/shared/Intro_to_Unix/sleepy
 Bourne-Again shell script text executable
 </code></pre>
 
+</div>
 <p><strong>Answer</strong>: Bourne-Again shell script text executable</p>
 <p>The "Bourne-Again shell" is more commonly known as BASH. The <em>file</em> command is telling us that sleepy 
 is (probably) a shell script written in the language of BASH.</p>
@@ -1820,21 +1822,27 @@ the <em>*</em> wildcard to specify that you want to copy all the files.
 <p>There are a number of ways you could do this depending on how you specify the source and destination 
 paths to <em>cp</em>. You only need to perform one of these ways, but we show multiple ones for your reference.</p>
 <p><strong>Answer 1</strong>: From your home directory:</p>
-<pre><code class="sh">$ cp /home/group/common/training/Intro_to_Unix/* test
+<div class="environment_if" id="ifenv8">
+<pre><code class="sh">$ cp /vlsci/TRAINING/shared/Intro_to_Unix/Intro_to_Unix/* test
 </code></pre>
 
+</div>
 <p><strong>Answer 2</strong>: Change to the test directory and then copy (assuming you started in your home directory):</p>
+<div class="environment_if" id="ifenv10">
 <pre><code class="sh">$ cd test
-$ cp /home/group/common/training/Intro_to_Unix/* .
+$ cp /vlsci/TRAINING/shared/Intro_to_Unix/* .
 </code></pre>
 
+</div>
 <p>In the example above the '<em>.</em>' (dot) character refers to the current working directory. It should be 
 the test subdirectory of your home directory.</p>
-<p><strong>Answer 3</strong>: Change to the /home/group/common/training/Intro_to_Unix/ directory and then copy:</p>
-<pre><code class="sh">cd /home/group/common/training/Intro_to_Unix/
+<p><strong>Answer 3</strong>: Change to the \end{UNIX_TRAINING_FILES_PATH} directory and then copy:</p>
+<div class="environment_if" id="ifenv12">
+<pre><code class="sh">cd /vlsci/TRAINING/shared/Intro_to_Unix/
 cp * ~/test
 </code></pre>
 
+</div>
 <p>Remember that ~ is a shortcut reference to your home directory.</p>
 </div>
 </div>
@@ -1899,20 +1907,24 @@ it from and the directory that you copied it to.</span></div>
 <p>Use <em>ls -l</em> to check the size of files.</p>
 <p>You could do this in many ways depending on the value of your working directory. We just show one possible 
 way for each file:</p>
-<pre><code class="sh">$ ls -l /home/group/common/training/Intro_to_Unix/expectations.txt
+<div class="environment_if" id="ifenv14">
+<pre><code class="sh">$ ls -l /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 
 $ ls -l ~/test/expectations.txt
 </code></pre>
 
+</div>
 <p>From the output of the above commands you should be able to see the size of each file and check that they 
 are the same. </p>
 <p><strong>Answer</strong>: They should each be <em>1033773</em> bytes</p>
 <p><strong>Alternate</strong>: Sometimes it is useful to get file sizes reported in more "human friendly" units than bytes. If this is 
 true then try the <em>-h</em> option for ls:</p>
-<pre><code class="sh">$ ls -lh /home/group/common/training/Intro_to_Unix/expectations.txt
--rw-r--r-- 1 arobinson common 1010K Mar 26  2012 /home/group/common/training/Intro_to_Unix/expectations.txt
+<div class="environment_if" id="ifenv16">
+<pre><code class="sh">$ ls -lh /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
+-rw-r--r-- 1 arobinson common 1010K Mar 26  2012 /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 </code></pre>
 
+</div>
 <p>In this case the size is reported in kilobytes as <em>1010K</em>. Larger files are reported in megabytes, gigabytes 
 etcetera.</p>
 </div>
@@ -1976,9 +1988,11 @@ it from and the directory that you copied it to.</span></div>
 <div class="showable-header answer" id="showabletitle82"><a href="" id="showablelink82">Answer</a></div>
 <div class="showable-body answer" id="showablebody82">
 <p>Use the <em>diff</em> command to compare the contents of two files.</p>
-<pre><code class="sh">$ diff /home/group/common/training/Intro_to_Unix/expectations.txt expectations.txt
+<div class="environment_if" id="ifenv18">
+<pre><code class="sh">$ diff /vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt expectations.txt
 </code></pre>
 
+</div>
 <p>If the two files are identical the <em>diff</em> command will NOT produce any output)</p>
 <p><strong>Answer</strong>: Yes, they are the same since no output was given.</p>
 </div>
@@ -2134,7 +2148,7 @@ editors exist such as <em>vim</em> and <em>emacs</em>, however they take a subst
 <div class="showable-container quest showable-hidden" id="showable91">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle91"><span class="link-like" id="showablelink91">4.7) Did the changes you made to <em>~/test/expectations.txt</em> have any effect on 
-<em>/home/group/common/training/Intro_to_Unix/expectations.txt</em>? How can you tell if two files are the 
+<em> <span class="environment_env" id="env0">/vlsci/TRAINING/shared/Intro_to_Unix</span></em>? How can you tell if two files are the 
 same or different in their contents?</span></div>
 </div>
 </div>
@@ -2181,10 +2195,12 @@ same or different in their contents?</span></div>
 <div class="showable-body answer" id="showablebody94">
 <p>Use <em>diff</em> to check that the two files are different after you have made the change to the copy of 
 <em>expectations.txt</em> in your <em>~/test</em> directory.</p>
+<div class="environment_if" id="ifenv20">
 <pre><code class="sh">diff ~/test/expectations.txt \
-/home/group/common/training/Intro_to_Unix/expectations.txt
+/vlsci/TRAINING/shared/Intro_to_Unix/expectations.txt
 </code></pre>
 
+</div>
 <p>You could also use <em>ls</em> to check that the files have different sizes.</p>
 </div>
 </div>
@@ -2436,7 +2452,7 @@ in the wrong location! Now is a good moment to pause and think about file backup
 <div class="showable-container quest showable-hidden" id="showable109">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle109"><span class="link-like" id="showablelink109">4.12) Recreate the test directory in your home directory and copy all the files from 
-<em>/home/group/common/training/Intro_to_Unix/</em> back into the test directory.</span></div>
+<em>\end[UNIX_TRAINING_FILES_PATH]</em> back into the test directory.</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable110">
@@ -2460,11 +2476,13 @@ in the wrong location! Now is a good moment to pause and think about file backup
 <div class="showable-header answer" id="showabletitle111"><a href="" id="showablelink111">Answer</a></div>
 <div class="showable-body answer" id="showablebody111">
 <p>Repeat exercises 4.1 and 4.2.</p>
+<div class="environment_if" id="ifenv22">
 <pre><code class="sh">$ cd ~
 $ mkdir test
-$ cp /home/group/common/training/Intro_to_Unix/* test
+$ cp /vlsci/TRAINING/shared/Intro_to_Unix/* test
 </code></pre>
 
+</div>
 </div>
 </div>
 </div>
@@ -3227,7 +3245,7 @@ that the <em>less</em> command is used by default to display man pages.</p>
 <div class="showable-header quest" id="showabletitle150"><a href="" id="showablelink150">5.6) The four-lines-per-read format of FASTQ is cumbersome to deal with. Often it would be 
 preferable if we could convert it to tab-separated-value (TSV) format, such that each read appears 
 on a single line with each of its fields separated by tabs. Use the following command to convert 
-sample_1.fastq.nl into TSV format:</a></div>
+sample_1.fastq into TSV format:</a></div>
 <div class="showable-body quest" id="showablebody150">
 <pre><code class="sh">$ cat sample_1.fastq | paste - - - - &gt; sample_1.tsv
 </code></pre>
