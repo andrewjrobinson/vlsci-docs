@@ -1,328 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
+<html>
+<head>
+	<title>Introduction to Unix - Bioinformatics Documentation</title>
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="http://www.latrobe.edu.au/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="http://www.latrobe.edu.au/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.latrobe.edu.au/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://www.latrobe.edu.au/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.latrobe.edu.au/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://www.latrobe.edu.au/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://www.latrobe.edu.au/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://www.latrobe.edu.au/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="http://www.latrobe.edu.au/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="http://www.latrobe.edu.au/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="http://www.latrobe.edu.au/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="http://www.latrobe.edu.au/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="http://www.latrobe.edu.au/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="http://www.latrobe.edu.au/favicon-16x16.png" sizes="16x16">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../assets/ltu_mb.css"/>
+	<link rel="stylesheet" href="../../includes/media/mdx_showable.css"/>
+	<link rel="stylesheet" href="../../includes/media/mdx_showable_user.css"/>
+	<link rel="stylesheet" href="../../includes/media/slides.css"/>
+	<link rel="stylesheet" href="../../includes/media/tute.css"/>
+	<link rel="stylesheet" href="../../includes/media/zzz-local-override.css"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Bioinformatics Documentation</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+		            <li class="">
+		                <a href="../..">Home</a>
+		            </li>
+		            <li role="presentation" class="dropdown">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials <span class="caret"></span></a>
+		                <ul class="dropdown-menu">
+		                    <li class="">
+		                        <a href="../hpc/">Introduction to HPC</a>
+		                    </li>
+		                    <li class="current">
+		                        <a href="./">Introduction to Unix</a>
+		                    </li>
+		                </ul>
+		            </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-	<title>Introduction to Unix - LSCC Documentation</title>
-
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/highlight.css">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link href="../../includes/media/mdx_showable.css" rel="stylesheet">
-        <link href="../../includes/media/mdx_showable_user.css" rel="stylesheet">
-        <link href="../../includes/media/slides.css" rel="stylesheet">
-        <link href="../../includes/media/tute.css" rel="stylesheet">
-        <link href="../../includes/media/zzz-local-override.css" rel="stylesheet">
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- Main title -->
-            <a class="navbar-brand" href="../..">LSCC Documentation</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
-            
-            
-                <li >
-                    <a href="../..">Home</a>
-                </li>
-            
-            
-            
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        
-<li >
-    <a href="../">Overview</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../ngs_overview/NGS_Overview/">NGS Overview</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../using_git/Using_Git/">Using Git and Github for revision control</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../gvl_launch/gvl_launch/">Launching a Personal GVL Server</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../galaxy_101/galaxy_101/">Introduction to Galaxy</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../galaxy-workflows/galaxy-workflows/">Galaxy Workflows</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../rna_seq_dge_basic/rna_seq_basic_background/">RNA-seq Basic Background</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../rna_seq_dge_basic/rna_seq_basic_tutorial/">RNA-seq Basic</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../rna_seq_dge_advanced/rna_seq_advanced_tutorial/">RNA-seq Advanced</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../rna_seq_exp_design/rna_seq_experimental_design/">RNA-seq Experimental Design</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../hpc/">Introduction to HPC</a>
-</li>
-
-                    
-                        
-<li class="active">
-    <a href="./">Introduction to Unix</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../python_overview/python_overview/">Python Overview</a>
-</li>
-
-                    
-                        
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Microbial de novo Assembly for Illumina Data</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../assembly/assembly/">Tutorial</a>
-</li>
-
-        
-            
-<li >
-    <a href="../assembly/assembly-background/">Method Background</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                    
-                        
-<li >
-    <a href="../variant_calling_galaxy_1/variant_calling_galaxy_1/">Introduction to Variant Calling using Galaxy</a>
-</li>
-
-                    
-                        
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Variant Detection Advanced</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../var_detect_advanced/var_detect_advanced/">Var detect advanced</a>
-</li>
-
-        
-            
-<li >
-    <a href="../var_detect_advanced/var_detect_advanced_background/">Var detect advanced background</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                    
-                        
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Identifying proteins from mass spectrometry data</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../proteomics_basic/proteomics_basic/">Tutorial</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_galaxy/">Galaxy Background</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_data_formats/">Data Formats Background</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_findcountitems_workflow/">Create find count items workflow</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_protein_databases/">Protein Databases</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_search_engines/">Search Engines</a>
-</li>
-
-        
-            
-<li >
-    <a href="../proteomics_basic/background_protein_prophet/">Protein Prophet</a>
-</li>
-
-        
-            
-<li >
-    <a href="../alignment/alignment/">Alignment Tutorial</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                    
-                        
-<li >
-    <a href="../genomespace/genomespace/">Introduction to GenomeSpace</a>
-</li>
-
-                    
-                    </ul>
-                </li>
-            
-            
-            
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Protocols <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        
-<li >
-    <a href="../assembly/assembly-protocol/">De Novo Genome Assembly for Illumina Data</a>
-</li>
-
-                    
-                    </ul>
-                </li>
-            
-            
-            </ul>
-
-            <!-- Search, Navigation and Repo links -->
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                <li >
-                    <a rel="next" href="../hpc/">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </li>
-                <li >
-                    <a rel="prev" href="../python_overview/python_overview/">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
-                
-            </ul>
-        </div>
-    </div>
-</div>
-
-        <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-    
-        <li class="main active"><a href="#introduction-to-unix">Introduction to Unix</a></li>
-        
-            <li><a href="#introduction">Introduction</a></li>
-        
-            <li><a href="#topic-1-remote-log-in">Topic 1: Remote log in</a></li>
-        
-            <li><a href="#topic-2-exploring-your-home-directory">Topic 2: Exploring your home directory</a></li>
-        
-            <li><a href="#topic-3-exploring-the-file-system">Topic 3: Exploring the file system</a></li>
-        
-            <li><a href="#topic-4-working-with-files-and-directories">Topic 4: Working with files and directories</a></li>
-        
-            <li><a href="#topic-5-pipes-output-redirection-and-shell-scripts">Topic 5: Pipes, output redirection and shell scripts</a></li>
-        
-            <li><a href="#finished">Finished</a></li>
-        
-    
-    </ul>
-</div></div>
-            <div class="col-md-9" role="main">
-
+	<div class="container">
+		<div class="row">
+			<!-- TOC -->
+			<div class="col-md-3">
+				<ul class="nav nav-sidebar">
+					<li><a href="#introduction-to-unix">Introduction to Unix</a></li> 
+					<li><a href="#introduction">Introduction</a></li> 
+					<li><a href="#topic-1-remote-log-in">Topic 1: Remote log in</a></li> 
+					<li><a href="#topic-2-exploring-your-home-directory">Topic 2: Exploring your home directory</a></li> 
+					<li><a href="#topic-3-exploring-the-file-system">Topic 3: Exploring the file system</a></li> 
+					<li><a href="#topic-4-working-with-files-and-directories">Topic 4: Working with files and directories</a></li> 
+					<li><a href="#topic-5-pipes-output-redirection-and-shell-scripts">Topic 5: Pipes, output redirection and shell scripts</a></li> 
+					<li><a href="#finished">Finished</a></li>  
+				</ul>
+			</div>
+			
+			<!-- Content -->
+			<div class="col-md-9">
+				<div class="row header-icons">
+					<div class="col-sm-6 ltu-logo"><img class="ltu" src="http://www.latrobe.edu.au/__data/assets/file/0005/770099/50th-Anniversary-logo.svg" /></div>
+					<div class="col-sm-6 vlsci-logo"><img class="vlsci" src="https://www.melbournebioinformatics.org.au/wp-content/themes/_vlsci/images/logos.png" /></div>
+				</div>
+				
 <style src="../../includes/media/tute.css" ></style>
 
 <style>em {font-style: normal; font-family: courier new;}</style>
@@ -533,7 +294,7 @@ username and password will be supplied at the start of the workshop.</p>
 <h3 id="exercises">Exercises</h3>
 <div class="showable-container quest" id="showable3">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle3"><a href="" id="showablelink3">1.1) When you’ve logged into the Unix server, run the following commands and see what they do:</a></div>
+<div class="showable-header quest" id="showabletitle3"><a href="" id="showablelink3">1.1) When you've logged into the Unix server, run the following commands and see what they do:</a></div>
 <div class="showable-body quest" id="showablebody3">
 <ul>
 <li><em>who</em></li>
@@ -1622,10 +1383,10 @@ directory as <em>sleepy</em> then:</p>
 -rw-r--r-- 1 arobinson common 183 Feb  9 16:36 sleepy
 </code></pre>
 
-<p><strong>Answer</strong>: The Answer is dependent on the computer you are connected too however will follow somthing like above. 
+<p><strong>Answer</strong>: The Answer is dependent on the computer you are connected too however will follow something like above. 
 We can see that this particular instance of sleepy is owned by the user arobinson, and is part of the common 
 user group. It is 183 bytes in size, and was last modified on the 9th of February at 4:36pm. The file is 
-readable to everyone, and writeable only to arobinson.  The digit '1' between the file permission string and 
+readable to everyone, and write-able only to arobinson.  The digit '1' between the file permission string and 
 the owner indicates that there is one link to the file. The Unix file system allows files to be referred to 
 by multiple "links". When you create a file it is referred to by one link, but you may add others later. For 
 future reference: links are created with the <em>ln</em> command.</p>
@@ -3870,52 +3631,25 @@ sample_3.fastq YYYYY
 <h2 id="finished">Finished</h2>
 <p>Well done, you learnt a lot over the last 5 topics and you should be proud of your achievement; it 
 was a lot to take in.</p>
-<p>From here you should be confortable around the Unix command line and ready to take on the HPC 
+<p>From here you should be comfortable around the Unix command line and ready to take on the HPC 
 Workshop.</p>
 <p>You will no-doubt forget a lot of what you learnt here so I encourage you to save a link to this 
-Workshop for later reference.</p>
-<p>Thank you for your attendance, please don't forget to complete the VLSCI training survey and give it
-back to the Workshop facilitators.</p></div>
-        </div>
+workshop for later reference.</p>
+<p>Thank you for your attendance, please don't forget to complete the training survey and give it
+back to the workshop facilitators.</p>
+			</div>
+		</div>
 
-        <footer class="col-md-12">
-            <hr>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
-        </footer>
+		<div class="footer">
+			<hr/>
+			<div class="footer-text">Developed by <a href="http://www.latrobe.edu.au">La Trobe University</a> and <a href="http://www.melbournebioinformatics.org.au/">Melbourne Bioinformatics</a></div>
+		</div>
+	</div>
 
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../js/highlight.pack.js"></script>
-        <script>var base_url = '../..';</script>
-        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
-        <script src="../../js/base.js"></script>
-        <script src="../../includes/media/delayed-jquery.js"></script>
-        <script src="../../includes/media/mdx_showable.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../../assets/ltu_mb.js"></script>
+	<script src="../../includes/media/delayed-jquery.js"></script>
+	<script src="../../includes/media/mdx_showable.js"></script>
+</body>
 </html>
