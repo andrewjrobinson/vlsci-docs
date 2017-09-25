@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	
 	<title>Introduction to Unix - Bioinformatics Documentation</title>
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="http://www.latrobe.edu.au/apple-touch-icon-57x57.png">
@@ -190,7 +192,7 @@ double dot's  e.g. <em>../..</em> </li>
 </div>
 </div>
 </div>
-<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script>(function(w,d,u){if(!w.$){w._delayed=true;console.info("Delaying JQuery calls");w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}}})(window,document)</script>
 <script>
     $(document).ready(function(){
         $("#showablelink0").click(function(e){
@@ -534,7 +536,7 @@ You can also find out the name of your home directory by printing the value of t
 <hr />
 <div class="showable-container quest showable-hidden" id="showable16">
 <div class="showable-inner">
-<div class="showable-header quest" id="showabletitle16"><span class="link-like" id="showablelink16">2.4) Run <em>ls</em> using the long flag (<em>-l</em>), how did the output change?</span></div>
+<div class="showable-header quest" id="showabletitle16"><span class="link-like" id="showablelink16">2.4) Run <em>ls</em> using the long-list flag (<em>-l</em>), how did the output change?</span></div>
 </div>
 </div>
 <div class="showable-container hint showable-hidden" id="showable17">
@@ -576,7 +578,7 @@ permission |  username   group   size    date       name
 
 <p>Where:</p>
 <ul>
-<li><strong>permissions</strong>: 4 parts, file type, user perms, group perms and other perms<ul>
+<li><strong>permissions</strong>: made up of 4 parts: file type, user perms, group perms and other perms<ul>
 <li><em>filetype</em>: 1 character, <em>d</em> = directory and <em>-</em> regular file</li>
 <li><em>user</em> permissions: 3 characters, <em>r</em> = read, <em>w</em> = write, <em>x</em> = execute and <em>-</em> no permission</li>
 <li><em>group</em> permissions: same as user except for users within the owner group</li>
@@ -2662,6 +2664,11 @@ do then they wont do anything.</p>
 the power of Unix.  I say <em>start</em> because this is only the "tip of the iceberg".</p>
 <p><strong>Duration</strong>: 50 minutes. <!-- See "Processes" from the workshop notes. --></p>
 <p><strong>Relevant commands</strong>: <em>wc</em>, <em>paste</em>, <em>grep</em>, <em>sort</em>, <em>uniq</em>, <em>nano</em>, <em>cut</em></p>
+<div class="info"><b>Note</b>: this section uses data obtained from DNA/RNA sequencer.  Sequencers take DNA/RNA fragments
+from an organism being studied and read the basepairs (A,C,T,G) that make up each fragment.  Each sequence of basepairs (from one fragment)
+is known as a <u>read</u> and is often stored in FastQ format, a text format which includes an ID, Annotation, Sequence 
+and Quality Score.</div>
+
 <div class="showable-container quest showable-hidden" id="showable133">
 <div class="showable-inner">
 <div class="showable-header quest" id="showabletitle133"><span class="link-like" id="showablelink133">5.1) How many <em>reads</em> are contained in the file <em>sample_1.fastq</em>?</span></div>

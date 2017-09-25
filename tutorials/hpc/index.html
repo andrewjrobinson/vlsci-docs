@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	
 	<title>Introduction to HPC - Bioinformatics Documentation</title>
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="http://www.latrobe.edu.au/apple-touch-icon-57x57.png">
@@ -164,7 +166,7 @@ That is, you need to tell it how many CPUs, RAM, Nodes (servers), and Time you n
 </div>
 </div>
 </div>
-<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script>(function(w,d,u){if(!w.$){w._delayed=true;console.info("Delaying JQuery calls");w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}}})(window,document)</script>
 <script>
     $(document).ready(function(){
         $("#showablelink0").click(function(e){
@@ -1466,9 +1468,9 @@ time.  If you think your job may not complete in time you can ask the system adm
 <p>Before we continue, a quick note on reservations.  Reservations are not normally needed however sometimes we will, particularly 
 when the HPC is busy.  To make use of a reservation you need to know its name and provide it with the <em>--reservation</em> option</p>
 <div class="environment_if" id="ifenv17">
-<p>Today we use the <em><span class="environment_env" id="env9">AROBINSON_TRAINING</span></em> reservation so that we have resources available to run our jobs.  Your
+<p>Today we use the <em><span class="environment_env" id="env9">AROBINSON_TRAINING926</span></em> reservation so that we have resources available to run our jobs.  Your
 jobs will need to contain the line:</p>
-<p><em>#SBATCH --reservation=<span class="environment_env" id="env10">AROBINSON_TRAINING</span></em></p>
+<p><em>#SBATCH --reservation=<span class="environment_env" id="env10">AROBINSON_TRAINING926</span></em></p>
 </div>
 <hr />
 </div>
@@ -1611,7 +1613,7 @@ prime 20
 echo &quot;Finished at: $(date)&quot;
 </code></pre>
 
-<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env7">AROBINSON_TRAINING</span></em> and 
+<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env7">AROBINSON_TRAINING926</span></em> and 
 <em>PARTITION</em> is replaced with <em><span class="environment_env" id="env8">main</span></em></p>
 </div>
 <div class="info"><b>Repeatable Science</b>: It's good scientific practice to include the version number of the module when loading it as this will 
@@ -1748,11 +1750,11 @@ Finished at: Fri May  8 16:11:27 AEST 2015
 <pre><code class="bash">#!/bin/bash
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1024
-#SBATCH --partition=TRAINING
+#SBATCH --partition=PARTITION
 #SBATCH --time=30:00
 #SBATCH --reservation=RESERVATION
-#SBATCH --mail-user=name@email.address
 #SBATCH --mail-type=ALL
+#SBATCH --mail-user=name@email.address
 
 module load training/1.0
 
@@ -1761,7 +1763,7 @@ prime 20
 echo &quot;Finished at: $(date)&quot;
 </code></pre>
 
-<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env5">AROBINSON_TRAINING</span></em>, <em>PARTITION</em> is replaced with <em><span class="environment_env" id="env6">main</span></em> and <em>name@email.address</em> by your email address</p>
+<p>Where <em>RESERVATION</em> is replaced with <em><span class="environment_env" id="env5">AROBINSON_TRAINING926</span></em>, <em>PARTITION</em> is replaced with <em><span class="environment_env" id="env6">main</span></em> and <em>name@email.address</em> by your email address</p>
 </div>
 <p><strong>Answers</strong>:</p>
 <ul>
@@ -2042,7 +2044,7 @@ on the system-wide section.  BARCOO it is 0-2400% and SNOWY it is 0-3200% for in
 <div class="showable-inner">
 <div class="showable-header" id="showabletitle101"><a href="" id="showablelink101">More</a></div>
 <div class="showable-body" id="showablebody101">
-<p><em>"m is for memory!"</em></p>
+<p>This one isn't obvious but it is sorting by "allocated memory", "<em>a</em> is for allocated"</p>
 </div>
 </div>
 </div>
@@ -2238,9 +2240,9 @@ the earlier topics if you have forgotten how to do these tasks.</p>
 <li><strong>Tasks</strong>: 1 </li>
 <li><strong>CPUs</strong>: 1</li>
 <li><strong>Partition</strong>: <span class="environment_env" id="env3">main</span> </li>
-<li><strong>Time</strong>: 5 mins </li>
+<li><strong>Time</strong>: 6 mins (note: if it runs 1 second over SLURM will terminate it)</li>
 <li><strong>Memory</strong>: 1 GB (remember to specify it in MB)</li>
-<li><strong>Reservation</strong>: <span class="environment_env" id="env4">AROBINSON_TRAINING</span>
+<li><strong>Reservation</strong>: <span class="environment_env" id="env4">AROBINSON_TRAINING926</span>
 </li>
 </ul>
 <h3 id="task-2-loaduse-software-module">Task 2: Load/use software module</h3>
@@ -2250,7 +2252,7 @@ the earlier topics if you have forgotten how to do these tasks.</p>
 <li>Runs the <em>fakejob</em> command with your name as the first parameter.  <ul>
 <li>FYI: <em>fakejob</em> is a command that was made to demonstrate what real commands
   might do in terms of CPU and Memory usage.  It does not perform any useful task; if you must know, it just calculates prime numbers for 5 minutes 
-  and consumes some memory</li>
+  and consumes some memory which you will watch in task 4</li>
 </ul>
 </li>
 </ul>
