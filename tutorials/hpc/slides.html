@@ -192,6 +192,13 @@ It's a lot to learn but not that difficult; just quite different to what you mig
 
 ???
 
+When specifying a job you need to request **resources**.
+
+This allows the server to know what your job will need and schedule the server appropriately.
+
+NOTE: specifying required resourses is separate to actually using them; you still need to tell your program 
+to use them if it can. e.g. most programs only use 1 CPU by default and some cannot use more than 1 so no point
+asking for more.
 
 ---
 # Job Type
